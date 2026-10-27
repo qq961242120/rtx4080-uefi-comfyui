@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-27",
+  "package": "source only",
+  "COFF_objects_compiled": 15,
+  "hardware_executed_for_publication": false,
+  "simulated_test_suites": {
+    "host": [
+      {
+        "suite": "guards",
+        "exit_code": 0,
+        "last_lines": [
+          "AD103 guard changed physical ROM PASS",
+          "AD103 guard unsupported FWSEC fuse version PASS",
+          "17 admission cases PASS; all hardware operations simulated."
+        ]
+      },
+      {
+        "suite": "efi_transaction",
+        "exit_code": 0,
+        "last_lines": [
+          "EFI integration pre-flr-ss1: result=-5 safe=0 retained=1 live_maps=20612 starts=1/1 flr=0 PASS",
+          "EFI integration late-flr-ss1: result=-5 safe=0 retained=1 live_maps=20612 starts=1/1 flr=0 PASS",
+          "90 real core + compat + UEFI port scenarios passed; all PCI/MMIO/DMA/firmware execution simulated."
+        ]
+      },
+      {
+        "suite": "display_release",
+        "exit_code": 0,
+        "last_lines": [
+          "display admission 60 PASS",
+          "display admission 61 PASS",
+          "display: 535233 checks; 62 scenarios; real CAP0003 graph/code, all EFI effects simulated."
+        ]
+      },
+      {
+        "suite": "app_flow",
+        "exit_code": 0,
+        "last_lines": [
+          "app extra fault 306 PASS",
+          "app extra fault 307 PASS",
+          "app flow: 601 checks; 32 scenarios, all effects simulated."
+        ]
+      },
+      {
+        "suite": "boot_io",
+        "exit_code": 0,
+        "last_lines": [
+          "boot I/O case 6 PASS loads=1 starts=0",
+          "boot I/O case 7 PASS loads=1 starts=0",
+          "boot I/O: 375 checks; 8 cases, real file bytes, all EFI services simulated."
+        ]
+      }
+    ],
+    "asan": [
+      {
+        "suite": "guards",
+        "exit_code": 0,
+        "last_lines": [
+          "AD103 guard changed physical ROM PASS",
+          "AD103 guard unsupported FWSEC fuse version PASS",
+          "17 admission cases PASS; all hardware operations simulated."
+        ]
+      },
+      {
+        "suite": "efi_transaction",
+        "exit_code": 0,
+        "last_lines": [
+          "EFI integration pre-flr-ss1: result=-5 safe=0 retained=1 live_maps=20612 starts=1/1 flr=0 PASS",
+          "EFI integration late-flr-ss1: result=-5 safe=0 retained=1 live_maps=20612 starts=1/1 flr=0 PASS",
+          "90 real core + compat + UEFI port scenarios passed; all PCI/MMIO/DMA/firmware execution simulated."
+        ]
+      },
+      {
+        "suite": "display_release",
+        "exit_code": 0,
+        "last_lines": [
+          "display admission 60 PASS",
+          "display admission 61 PASS",
+          "display: 535233 checks; 62 scenarios; real CAP0003 graph/code, all EFI effects simulated."
+        ]
+      },
+      {
+        "suite": "app_flow",
+        "exit_code": 0,
+        "last_lines": [
+          "app extra fault 306 PASS",
+          "app extra fault 307 PASS",
+          "app flow: 601 checks; 32 scenarios, all effects simulated."
+        ]
+      },
+      {
+        "suite": "boot_io",
+        "exit_code": 0,
+        "last_lines": [
+          "boot I/O case 6 PASS loads=1 starts=0",
+          "boot I/O case 7 PASS loads=1 starts=0",
+          "boot I/O: 375 checks; 8 cases, real file bytes, all EFI services simulated."
+        ]
+      }
+    ]
+  },
+  "privacy_review": "allowlisted source/licence files only; no firmware, ROM, private paths, addresses, owner labels, credentials, local boot profile or inherited Git history",
+  "source_core_changes": "label replacements only",
+  "label_changed_files": [
+    "app.c",
+    "boot_io.c",
+    "display_release.c",
+    "profile.c"
+  ],
+  "publication_wrapper_changes": [
+    "local compile/link interface replaces SSH build",
+    "GU_FIXTURE_ROOT configures local test input",
+    "synthetic GUID for hosted tests"
+  ],
+  "private_fixture_bytes_included": false,
+  "linked_EFI_included": false,
+  "full_fixture_suites_require_operator_inputs": true
+}

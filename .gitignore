@@ -1,0 +1,14 @@
+local/
+fixtures/
+build/
+__pycache__/
+*.pyc
+*.rom
+*.bin
+*.efi
+*.EFI
+*.obj
+*.o
+*.zip
+.DS_Store
+._*
